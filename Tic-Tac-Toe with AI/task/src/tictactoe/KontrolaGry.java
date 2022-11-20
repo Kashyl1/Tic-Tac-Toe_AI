@@ -79,27 +79,27 @@ public class KontrolaGry extends  AiHard{
             ruchGracza(x);
         }
         if (Objects.equals(uzytkownik, "easy")) {
-            System.out.println("Making move level \"easy\"");
+            System.out.println("Ruch bot: \"easy\"");
             ruchAIEasy(x);
         }
         if (Objects.equals(uzytkownik, "medium")) {
-            System.out.println("Main move level \"medium\"");
+            System.out.println("Ruch bot: \"medium\"");
             ruchAIMedium(x, OX);
         }
         if (Objects.equals(uzytkownik, "hard")) {
-            System.out.println("Main move level \"hard\"");
+            System.out.println("Ruch bot: \"hard\"");
             ruchAIHard(x, OX);
         }
     }
     boolean Rezultat(int c) { // Sprawdza czy koniec gry oraz kto wygrywa
         if (mapa.Wygrany(gra, 'X')) {
-            System.out.println("X wins");
+            System.out.println("X wygrywa");
             return true;
         } else if (mapa.Wygrany(gra, 'O')) {
-            System.out.println("O wins");
+            System.out.println("O wygrywa");
             return true;
         } else if (c == 9) {
-            System.out.println("Draw");
+            System.out.println("Remis");
             return true;
         }
         return false;
